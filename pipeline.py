@@ -5,7 +5,7 @@ from seesaw.pipeline import *
 from seesaw.project import *
 
 pipeline = Pipeline(
-    ExternalProcess("WebshotsDiscovery", ["./discover-webshots.py"])
+    ExternalProcess("WebshotsDiscovery", ["./discover-webshots.py"]),
     ExternalProcess("WebshotsChecker", ["./check-webshots.py"])
 )
 
