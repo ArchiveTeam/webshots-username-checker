@@ -14,7 +14,7 @@ USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/533.20
 http_client = httpclient.HTTPClient()
 
 print "Loading task..."
-res = http_client.fetch("http://tracker.archiveteam.org:8123/request-discover", method="POST", body="n=25&version=2")
+res = http_client.fetch("http://tracker.archiveteam.org:8123/request-discover", method="POST", body="n=25&version=2&standalone=1")
 task = json.loads(res.body)
 # task = { "id": 123, "prefix": "ab03" }
 

@@ -74,7 +74,7 @@ class WebshotsChecker(object):
 
 print "Loading usernames..."
 http_client = httpclient.HTTPClient()
-res = http_client.fetch("http://tracker.archiveteam.org:8123/request", method="POST", body="")
+res = http_client.fetch("http://tracker.archiveteam.org:8123/request", method="POST", body="standalone=1")
 task = json.loads(res.body)
 
 print "Task %s" % task["id"]
